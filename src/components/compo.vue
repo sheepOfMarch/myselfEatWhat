@@ -19,8 +19,13 @@
 				<!-- <hr> -->
 				<div class="hr"></div>
 				<div class="look">
-					<img src="/src/images/eye.png" alt="">
-					<span>520</span>
+					<div>
+						<img src="/src/images/eye.png" alt="">
+						<span>520</span>
+					</div>
+					<div>
+						<span v-if="true" class="glyphicon glyphicon-trash del"></span>
+					</div>
 				</div>
 			</div>
 	</div>
@@ -80,10 +85,16 @@
 	
 			.look {
 				margin: 5px 8px;
-	
-				>img {
+				display: flex;
+				justify-content: space-between;
+				img {
 					width: 20px;
 					opacity: 0.3;
+					margin-left: 5px;
+				}
+				.del {
+					margin-right: 5px;
+					color: grey;
 				}
 			}
 		}

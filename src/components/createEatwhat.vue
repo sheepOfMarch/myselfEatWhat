@@ -17,6 +17,20 @@
 </template>
 
 <script>
+	export default {
+		// data() {},
+		created() {
+			if(this.$store.state.islog) {
+				this.$router.push({
+					path: '/createeatwhat'
+				});
+			}else{
+				this.$router.push({
+					path: '/user/login'
+				});
+			}
+		}
+	}
 </script>
 
 <style lang="less" scoped>

@@ -81,6 +81,7 @@
 
 			#zwEatWhat_a {
 				margin-bottom: 40px;
+				text-decoration: none;
 			}
 
 			.share {

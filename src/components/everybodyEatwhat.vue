@@ -1,7 +1,7 @@
 <template>
 	<div class="everybody-box">
 		<div class="itemBox">
-		<compo v-for="item in 10"></compo>
+			<compo v-for="item in 10"></compo>
 		</div>
 		<div class="pageCount">
 			<!-- <p class="page" v-for="pagecount in 20">{{ pagecount }}</p> -->
@@ -30,15 +30,17 @@
 
 <script>
 	import compo from './compo.vue';
-	 export default {  
-	         components: {compo},  
-	     }  
+	export default {
+		components: {
+			compo
+		},
+	}
 </script>
 
 <style lang="less">
 	.everybody-box {
 		padding: 20px 30px 0px 30px;
-		
+
 		.itemBox {
 			height: 450px;
 			overflow: hidden;
@@ -47,18 +49,25 @@
 		.pageCount {
 
 
-			width: 216px;
-			height: 60px;
+			width: 220px;
+			height: 30px;
 			margin: auto;
 			// border: 1px solid cadetblue;
 			clear: both;
 			overflow: hidden;
 
+
+			.pagination,
 			.pagination>li>a,
 			.pagination>li>span {
+				margin: 5px 0 0 0;
 				border: none;
 				padding-top: 0px;
+
 			}
+
+
+
 
 			.page {
 				float: left;

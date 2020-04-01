@@ -8,6 +8,7 @@
 					<router-link class="navbar-title" to="/todayeatwhat">今天吃什么</router-link>
 				</li>
 				<li>
+					<!-- <router-link class="navbar-title" to="$store.state.islog?'/createeatwhat':'/user/login'">创建吃什么</router-link> -->
 					<router-link class="navbar-title" to="/createeatwhat">创建吃什么</router-link>
 				</li>
 				<li>
@@ -20,8 +21,8 @@
 					<router-link class="navbar-title" to="/aboutus">关于我们</router-link>
 				</li>
 			</ul>
-			<router-link class="nav-login" v-show="islog" to="/user/login"><span class="nav-login-btn">登陆/注册</span></router-link>
-			<router-link class="nav-login" v-show="!islog" to="/user/usercenter">
+			<router-link class="nav-login" v-show="!$store.state.islog" to="/user/login"><span class="nav-login-btn">登陆/注册</span></router-link>
+			<router-link class="nav-login" v-show="$store.state.islog" to="/user/usercenter">
 				<img class="userpic" src="/src/images/userpic.jpg"><span class="usercenter">个人中心</span>
 			</router-link>
 		</div>
@@ -39,7 +40,7 @@
 	export default {
 		data() {
 			return {
-				islog: true
+				// islog: true
 			}
 		}
 	}
